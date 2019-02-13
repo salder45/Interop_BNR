@@ -1,6 +1,8 @@
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.io.IOException;
+
 public class Jhava {
 
     private int hitPoints = 52489112;
@@ -32,6 +34,10 @@ public class Jhava {
         Hero.handOverFood("pizza");
     }
 
+    public void extendHandFriendship() throws Exception{
+        throw new Exception();
+    }
+
     public static void main(String[] args){
         System.out.println(Hero.makeProclamation());
 
@@ -44,6 +50,14 @@ public class Jhava {
         System.out.println("Max spell count: " + Spellbook.MAX_SPELL_COUNT);
 
         Spellbook.getSpellbookGreeting();
+    }
+
+    public void apologize(){
+        try{
+            Hero.acceptApology();
+        }catch (IOException e){
+            System.out.println("Caught!");
+        }
     }
 
 }
