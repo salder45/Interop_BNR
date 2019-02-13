@@ -28,4 +28,22 @@ public class Jhava {
         this.greeting = greeting;
     }
 
+    public void offerFood(){
+        Hero.handOverFood("pizza");
+    }
+
+    public static void main(String[] args){
+        System.out.println(Hero.makeProclamation());
+
+        System.out.println("Spells: ");
+        Spellbook spellbook = new Spellbook();
+        for(String spell : spellbook.spells){
+            System.out.println(spell);
+        }
+
+        System.out.println("Max spell count: " + Spellbook.MAX_SPELL_COUNT);
+
+        Spellbook.getSpellbookGreeting();
+    }
+
 }
